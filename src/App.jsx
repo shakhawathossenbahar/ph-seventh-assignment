@@ -21,13 +21,12 @@ function Main({ fetchCustomer }) {
 
 
 
-  const initialInProgress = customerData.filter((data) => data.status === "In-Progress");
   const initialCustomerTickets = customerData.filter((data) => data.status !== "In-Progress");
 
 
 
   const [customerTickets, setCustomerTickets] = useState(initialCustomerTickets);
-  const [inProgressTickets, setInProgressTickets] = useState(initialInProgress);
+  const [inProgressTickets, setInProgressTickets] = useState([]);
   const [resolvedTickets, setResolvedTickets] = useState([]);
 
 
